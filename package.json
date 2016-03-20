@@ -1,0 +1,8 @@
+{
+  "name": "timestamp-microservice",
+  "version": "0.0.0",
+  "description": "timestamp microservice that returns a date in unix and natural date format in JSON",
+  "main": "server.js",
+  "repository": "",
+  "author": "Trevor Baker"
+}
