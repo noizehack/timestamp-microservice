@@ -27,10 +27,18 @@ fs.readFile('.env', 'utf8', function (err, data) {
         } else {
           inputDate = new Date(input.replace(/%20/g, ' '));
         }
-        var json = {
-          unix: inputDate.getTime() / 1000,
-          natural: months[inputDate.getMonth()] + ' ' + inputDate.getDate() + ', ' + inputDate.getFullYear()
-        };
+        var json = {};
+        if (!(inputDate == 'Invalid Date')) { //had to use == instead of === to get this to work
+          json = {
+            unix: inputDate.getTime() / 1000,
+            natural: months[inputDate.getMonth()] + ' ' + inputDate.getDate() + ', ' + inputDate.getFullYear()
+          };
+        } else {
+          json = {
+            unix: null,
+            natural: null
+          };
+        }
         res.end(JSON.stringify(json));
       }
     });
