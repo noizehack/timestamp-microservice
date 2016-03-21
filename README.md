@@ -10,19 +10,13 @@ From the console run:
 
     node server.js
 
+Or on Heroku the Procfile should launch the server automatically
+
 ##dependencies
 * node.js
 * uses built in node modules:
  * fs
  * http
- * url
-
-##.env file setup
-There should be a .env file in the main directory with the url of the service and the port that the server will listen on. Include a slash at the end of the url and do not leave any white space around the url or port. Formatted like:
-
-    URL:https:www.example.com/timestampMicroservice/
-    PORT:8080
-
 
 ###Example inputs:
 
